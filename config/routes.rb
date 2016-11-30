@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get   'blogs',             :to => 'blogs#index'
   post  'blogs',             :to => 'blogs#create'
   get   'blogs/:id',         :to => 'blogs#show'
-  post  'blogs/like/:id',    :to => 'blogs#like'
+  get   'blogs/like/:id',    :to => 'blogs#like'
   post  'blogs/:id/comment', :to => 'blogs#comment'
 end

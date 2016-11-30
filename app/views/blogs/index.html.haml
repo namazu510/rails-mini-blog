@@ -9,7 +9,7 @@
         #{blog.id}
         = link_to blog.body, {:controller => :blogs, :action => :show, :id => blog.id}
       .blog__detail
-        = link_to 'いいね', {:controller => :blogs, :action => :like, :id => blog.id}, :method => :post
+        = link_to 'いいね', {:controller => :blogs, :action => :like, :id => blog.id}
         \: #{blog.like}
         コメント数:#{blog.replies.size}
         | 投稿日時:#{blog.created_at}

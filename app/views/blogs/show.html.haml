@@ -6,7 +6,7 @@
   .blog__detail
     #{@blog.id} :
     投稿日時:#{@blog.created_at}　|
-    = link_to 'いいね', {:controller => :blogs, :action => :like, :id => @blog.id}, :method => :post
+    = link_to 'いいね', {:controller => :blogs, :action => :like, :id => @blog.id}
     \:#{@blog.like}
   .blog__title
     #{@blog.body}
