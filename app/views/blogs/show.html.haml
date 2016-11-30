@@ -1,0 +1,23 @@
+%h1 Mini blog
+= link_to '戻る', blogs_path
+%hr
+
+.blog
+  .blog__detail
+    #{@blog.id} :
+    投稿日時:#{@blog.created_at}　|
+    = link_to 'いいね', {:controller => :blogs, :action => :like, :id => @blog.id}, :method => :post
+    \:#{@blog.like}
+  .blog__title
+    #{@blog.body}
+
+= form_tag :controller => 'blogs', :action => 'comment' do
+  = text_field_tag :comment
+  = submit_tag "コメントする"
+
+%hr
+
+- @replys.each do |reply|
+  .reply
+    .reply__body #{reply.comment}
+    .reply__detail 投稿日時: #{reply.created_at}

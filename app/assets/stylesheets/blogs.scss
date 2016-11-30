@@ -1,0 +1,32 @@
+// Place all the styles related to the Blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+hr{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+form{
+  margin: 10px;
+}
+
+.blog{
+  .blog__title{
+    font-size: 1.5rem;
+    margin: 4px;
+  }
+  .blog__detail{
+    margin: 4px;
+  }
+  margin: 4px;
+}
+
+.reply{
+  .reply__body{
+    font-size: 1.2rem;
+  }
+  .reply__detail{
+    color: rgba(0,0,0,.8)
+  }
+  margin: 4px;
+}

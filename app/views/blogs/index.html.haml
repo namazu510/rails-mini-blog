@@ -1,0 +1,15 @@
+%h1 Mini blog
+= form_for @blog do |f|
+  = f.text_field :body, :placeholder => "投稿しよう"
+  = f.submit "投稿する"
+%hr
+  - @blogs.each do |blog|
+    .blog
+      .blog__title
+        #{blog.id}
+        = link_to blog.body, {:controller => :blogs, :action => :show, :id => blog.id}
+      .blog__detail
+        = link_to 'いいね', {:controller => :blogs, :action => :like, :id => blog.id}, :method => :post
+        \: #{blog.like}
+        コメント数:#{blog.replies.size}
+        | 投稿日時:#{blog.created_at}
