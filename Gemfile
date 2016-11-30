@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'unicorn'
 gem 'haml-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
